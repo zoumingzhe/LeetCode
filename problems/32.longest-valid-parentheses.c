@@ -23,31 +23,8 @@ StackLink *pop(StackLink *s)
 	return ret;
 }
 
-int top(StackLink *s, int n)
-{
-	StackLink *ret = s;
-    while (--n)
-    {
-        if (ret)
-        {
-            ret = ret->prev;
-        }
-        else
-        {
-            break;
-        }
-        
-    }
-
-    if (ret)
-    {
-        return ret->len;
-    }
-    else
-    {
-        return 0;
-    }
-}
+#define dtop1(s) (s ? s->len : 0)
+#define dtop2(s) (s ? s->prev ? s->prev->len : 0 : 0)
 
 int longestValidParentheses(char * s){
     int i = 0;
@@ -60,8 +37,8 @@ int longestValidParentheses(char * s){
     {
         if (s[i] == ')')
         {
-            top1 = top(stack, 1);
-            top2 = top(stack, 2);
+            top1 = dtop1(stack);
+            top2 = dtop2(stack);
             if (top1 == 1)
             {
                 stack->len = 2;
@@ -77,7 +54,7 @@ int longestValidParentheses(char * s){
                 stack = push(stack, 0);
             }
 
-            while (top(stack, 2) > 1 && stack->len > 1)
+            while (dtop1(stack) > 1 && dtop2(stack) > 1)
             {
                 tmp = stack->len;
                 stack = pop(stack);
