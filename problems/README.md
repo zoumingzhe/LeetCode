@@ -1,7 +1,7 @@
 # problems
 
-No. | 难度 | 问题
-- | :-: | :-:
+ No.  | 难度 | 问题
+ -    | :-: | :-:
  1.   | 简单 | [两数之和](https://leetcode-cn.com/problems/two-sum/)
  32.  | 困难 | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/)
  33.  | 中等 | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)
