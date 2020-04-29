@@ -1,50 +1,20 @@
+#define min(a,b) (a<b?a:b)
 #define max(a,b) (a>b?a:b)
-#define is_merge(a,b) ((a>=0&&b>=0)?1:0)
-
-int max_val(int *arr, int num, int off)
-{
-    int sum = arr[off];
-    int max = arr[off];
-    if (max < 0)
-    {
-        return max;
-    }
-    
-    for (int i = off + 1; i < off + num; i++)
-    {
-        sum += arr[i % num];
-        max = max(max, sum);
-    }
-    return max;
-}
-
-int max_sub(int *arr, int num)
-{
-    int val = arr[0];
-    int max = arr[0];
-    for (int i = 0; i < num; i++)
-    {
-        val = max_val(arr, num, i);
-        max = max(max, val);
-    }
-    return max;
-}
 
 int maxSubarraySumCircular(int* A, int ASize){
-    int *B = (int*)malloc(sizeof(int)*ASize);
-    int BSize;
-    BSize = 1;
-    B[0] = A[0];
-    for (int off = 1; off < ASize; off++)
-    {
-        if (is_merge(A[off], B[BSize-1]))
-        {
-            B[BSize-1] += A[off];
-        }
-        else
-        {
-            B[BSize++] = A[off];
-        }
-    }
-    return max_sub(B, BSize);
+	int sum = A[0];
+	int min_end_here = A[0];
+	int min_sub_nums = A[0];
+	int max_end_here = A[0];
+	int max_sub_nums = A[0];
+	for (int i = 1; i < ASize; i++)
+	{
+		sum += A[i];
+		min_end_here = min(min_end_here+A[i], A[i]);
+		min_sub_nums = min(min_sub_nums, min_end_here);
+		max_end_here = max(max_end_here+A[i], A[i]);
+		max_sub_nums = max(max_sub_nums, max_end_here);
+	}
+	int tmp = sum-min_sub_nums;
+	return tmp == 0 ? max_sub_nums : max(tmp, max_sub_nums);
 }
