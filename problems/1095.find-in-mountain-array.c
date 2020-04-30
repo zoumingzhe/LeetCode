@@ -1,4 +1,10 @@
 #define MID(a,b) (((a)+(b))/2)
+#define CHECK(i) do{\
+	if (get(mountainArr, i) == target)\
+	{\
+		return i;\
+	}\
+} while(0)\
 
 /**
  * *********************************************************************
@@ -19,11 +25,6 @@ int findInMountainArray(int target, MountainArray* mountainArr) {
 	int valm1, valm2;
 	int moff, mval;
 	int offm, valm;
-
-	if (get(mountainArr, 0) == target)
-	{
-		return 0;
-	}
 
 	if (len > 3)
 	{
@@ -75,25 +76,19 @@ int findInMountainArray(int target, MountainArray* mountainArr) {
 
 	off1 = 0;
 	off2 = moff - 1;
-	while (off1 < off2)
+	while (off1 <= off2)
 	{
+		CHECK(off1);
+		CHECK(off2);
 		offm = MID(off1, off2);
 		valm = get(mountainArr, offm);
 		if (valm > target)
 		{
 			off2 = offm - 1;
-			if (get(mountainArr, offm - 1) == target)
-			{
-				return offm - 1;
-			}
 		}
 		else if (valm < target)
 		{
 			off1 = offm + 1;
-			if (get(mountainArr, offm + 1) == target)
-			{
-				return offm + 1;
-			}
 		}
 		else
 		{
@@ -101,36 +96,21 @@ int findInMountainArray(int target, MountainArray* mountainArr) {
 		}
 	}
 
-	if (get(mountainArr, moff + 1) == target)
-	{
-		return moff + 1;
-	}
-	if (get(mountainArr, len -1) == target)
-	{
-		return len - 1;
-	}
-
 	off1 = moff + 1;
 	off2 = len - 1;
-	while (off1 < off2)
+	while (off1 <= off2)
 	{
+		CHECK(off1);
+		CHECK(off2);
 		offm = MID(off1, off2);
 		valm = get(mountainArr, offm);
 		if (valm > target)
 		{
 			off1 = offm + 1;
-			if (get(mountainArr, offm + 1) == target)
-			{
-				return offm + 1;
-			}
 		}
 		else if (valm < target)
 		{
 			off2 = offm - 1;
-			if (get(mountainArr, offm - 1) == target)
-			{
-				return offm - 1;
-			}
 		}
 		else
 		{
