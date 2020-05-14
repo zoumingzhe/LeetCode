@@ -61,11 +61,18 @@ int** levelOrder(struct TreeNode* root, int* returnSize, int** returnColumnSizes
     QueueLink *h = NULL;
     QueueLink *t = NULL;
     struct TreeNode *curr;
-    int** ret = (int**)malloc(sizeof(int*)*100);
+    int** ret = (int**)malloc(sizeof(int*)*10000);
     for (size_t i = 0; i < 100; i++)
     {
         ret[i] = NULL;
     }
+
+    if (!root)
+    {
+        *returnSize = 0;
+        return NULL;
+    }
+    
 
     h = t = push(t, 0, root);
     ret[0] = (int*)malloc(sizeof(int)*1);
@@ -86,11 +93,11 @@ int** levelOrder(struct TreeNode* root, int* returnSize, int** returnColumnSizes
         ret[c->level][col++] = curr->val;
         if (curr->left)
         {
-            push(t, c->level+1, curr->left);
+            t = push(t, c->level+1, curr->left);
         }
         if (curr->right)
         {
-            push(t, c->level+1, curr->right);
+            t = push(t, c->level+1, curr->right);
         }
         h = h->next;
         free(c);
