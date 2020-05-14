@@ -3,6 +3,7 @@
  | No.    | 难度 | 问题 |
  | -:     | :-:  | :-   |
  | 1.     | 简单 | [两数之和](https://leetcode-cn.com/problems/two-sum/) |
+ | 2.     | 中等 | [两数相加](https://leetcode-cn.com/problems/add-two-numbers/) |
  | 7.     | 简单 | [整数反转](https://leetcode-cn.com/problems/reverse-integer/) |
  | 32.    | 困难 | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/) |
  | 33.    | 中等 | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) |
