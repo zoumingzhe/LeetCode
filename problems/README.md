@@ -12,5 +12,6 @@
  | 136.   | ★★★ | 简单 | [只出现一次的数字](https://leetcode-cn.com/problems/single-number/) |
  | 321.   | ☆☆☆ | 困难 | [拼接最大数](https://leetcode-cn.com/problems/create-maximum-number/) |
  | 445.   | ★★☆ | 中等 | [两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/) |
+ | 560.   | ★★★ | 中等 | [和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/) |
  | 918.   | ★★★ | 中等 | [环形子数组的最大和](https://leetcode-cn.com/problems/maximum-sum-circular-subarray/) |
  | 1095.  | ☆☆☆ | 困难 | [山脉数组中查找目标值](https://leetcode-cn.com/problems/find-in-mountain-array/) |
