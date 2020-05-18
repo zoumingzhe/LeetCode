@@ -10,6 +10,7 @@
  | 50.    | ★★☆ | 中等 | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/) |
  | 102.   | ★★★ | 中等 | [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/) |
  | 136.   | ★★★ | 简单 | [只出现一次的数字](https://leetcode-cn.com/problems/single-number/) |
+ | 152.   | ★★☆ | 中等 | [乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/) |
  | 321.   | ☆☆☆ | 困难 | [拼接最大数](https://leetcode-cn.com/problems/create-maximum-number/) |
  | 445.   | ★★☆ | 中等 | [两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/) |
  | 560.   | ★★★ | 中等 | [和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/) |
