@@ -1,6 +1,6 @@
 int findDuplicate(int* nums, int numsSize){
-    int *tmp = (int*)malloc(sizeof(int)*numsSize);
-    memset(tmp, 0x0, sizeof(int)*numsSize);
+    char *tmp = (char*)malloc(numsSize);
+    memset(tmp, 0x0, numsSize);
     for (int i = 0; i < numsSize; i++)
     {
         if (tmp[nums[i]])
@@ -9,7 +9,7 @@ int findDuplicate(int* nums, int numsSize){
         }
         else
         {
-            tmp[nums[i]] = nums[i];
+            tmp[nums[i]] = 1;
         }
     }
     return 0;
