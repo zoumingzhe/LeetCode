@@ -13,6 +13,7 @@
  | 152.   | ★★☆ | 中等 | [乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/) |
  | 287.   | ★☆☆ | 中等 | [寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/) |
  | 321.   | ☆☆☆ | 困难 | [拼接最大数](https://leetcode-cn.com/problems/create-maximum-number/) |
+ | 394.   | ★★★ | 中等 | [字符串解码](https://leetcode-cn.com/problems/decode-string/) |
  | 445.   | ★★☆ | 中等 | [两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/) |
  | 560.   | ★★★ | 中等 | [和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/) |
  | 918.   | ★★★ | 中等 | [环形子数组的最大和](https://leetcode-cn.com/problems/maximum-sum-circular-subarray/) |
