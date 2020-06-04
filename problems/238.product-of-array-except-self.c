@@ -3,18 +3,19 @@
  */
 int* productExceptSelf(int* nums, int numsSize, int* returnSize){
     int* ret = (int*)malloc(sizeof(int)*numsSize);
-    int  product = nums[0];
-
-    for (int i = 1; i < numsSize; i++)
-    {
-        product *= nums[i];
-    }
 
     for (int i = 0; i < numsSize; i++)
     {
-        ret[i] = product / nums[i];
+        ret[i] = 1;
+        for (int j = 0; j < numsSize; j++)
+        {
+            if (i != j)
+            {
+                ret[i] *= nums[j];
+            }
+        }
     }
-    
+
     *returnSize = numsSize;
     return ret;
 }
