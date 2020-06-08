@@ -21,4 +21,5 @@
  | 560.   | ★★★ | 中等 | [和为K的子数组](https://leetcode-cn.com/problems/subarray-sum-equals-k/) |
  | 837.   | ★★★ | 中等 | [新21点](https://leetcode-cn.com/problems/new-21-game/) |
  | 918.   | ★★★ | 中等 | [环形子数组的最大和](https://leetcode-cn.com/problems/maximum-sum-circular-subarray/) |
+ | 990.   | ★★★ | 中等 | [等式方程的可满足性](https://leetcode-cn.com/problems/satisfiability-of-equality-equations/) |
  | 1095.  | ☆☆☆ | 困难 | [山脉数组中查找目标值](https://leetcode-cn.com/problems/find-in-mountain-array/) |
