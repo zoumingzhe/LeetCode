@@ -3,26 +3,27 @@
  */
 int* dailyTemperatures(int* T, int TSize, int* returnSize){
     int* ret = (int*)malloc(sizeof(int)*TSize);
-    int  min_day = 0;
+    int* tmp = (int*)malloc(sizeof(int)*TSize);
+    int  len = 0;
+    int  day = 0;
 
     for (int i = 0; i < TSize; i++)
     {
         ret[i] = 0;
-        for (int j = min_day; j < i; j++)
+        for (int j = len - 1; j >= 0; j--)
         {
-            if (ret[j] == 0 && T[i] > T[j])
+            day = tmp[j];
+            if (T[i] > T[day])
             {
-                ret[j] = i - j;
+                ret[day] = i - day;
+                len--;
             }
-        }
-        for (int j = min_day; j < i; j++)
-        {
-            if (ret[j] == 0)
+            else
             {
-                min_day = j;
                 break;
             }
         }
+        tmp[len++] = i;
     }
 
     *returnSize = TSize;
