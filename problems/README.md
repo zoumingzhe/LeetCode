@@ -8,6 +8,7 @@
  | 9.     | ★☆☆ | 简单 | [回文数](https://leetcode-cn.com/problems/palindrome-number/) |
  | 32.    | ★★☆ | 困难 | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/) |
  | 33.    | ★☆☆ | 中等 | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) |
+ | 43.    | ★★★ | 中等 | [字符串相乘](https://leetcode-cn.com/problems/multiply-strings/) |
  | 50.    | ★★☆ | 中等 | [Pow(x, n)](https://leetcode-cn.com/problems/powx-n/) |
  | 64.    | ★☆☆ | 中等 | [求1+2+…+n](https://leetcode-cn.com/problems/qiu-12n-lcof/) |
  | 102.   | ★★★ | 中等 | [二叉树的层序遍历](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/) |
