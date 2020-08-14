@@ -18,6 +18,7 @@
  | 198.   | ★★☆ | 简单 | [打家劫舍](https://leetcode-cn.com/problems/house-robber/) |
  | 238.   | ★★☆ | 中等 | [除自身以外数组的乘积](https://leetcode-cn.com/problems/product-of-array-except-self/) |
  | 287.   | ★☆☆ | 中等 | [寻找重复数](https://leetcode-cn.com/problems/find-the-duplicate-number/) |
+ | 303.   | ★☆☆ | 简单 | [区域和检索 - 数组不可变](https://leetcode-cn.com/problems/range-sum-query-immutable/) |
  | 321.   | ☆☆☆ | 困难 | [拼接最大数](https://leetcode-cn.com/problems/create-maximum-number/) |
  | 394.   | ★★★ | 中等 | [字符串解码](https://leetcode-cn.com/problems/decode-string/) |
  | 445.   | ★★☆ | 中等 | [两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/) |
