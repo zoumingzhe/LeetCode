@@ -6,6 +6,7 @@
  | 2.     | ★☆☆ | 中等 | [两数相加](https://leetcode-cn.com/problems/add-two-numbers/) |
  | 7.     | ★★☆ | 简单 | [整数反转](https://leetcode-cn.com/problems/reverse-integer/) |
  | 9.     | ★☆☆ | 简单 | [回文数](https://leetcode-cn.com/problems/palindrome-number/) |
+ | 20.    | ★★☆ | 简单 | [有效的括号](https://leetcode-cn.com/problems/valid-parentheses/) |
  | 32.    | ★★☆ | 困难 | [最长有效括号](https://leetcode-cn.com/problems/longest-valid-parentheses/) |
  | 33.    | ★☆☆ | 中等 | [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) |
  | 43.    | ★★★ | 中等 | [字符串相乘](https://leetcode-cn.com/problems/multiply-strings/) |
