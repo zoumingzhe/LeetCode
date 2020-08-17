@@ -10,43 +10,54 @@
 #define max(a,b) (a)>(b)?(a):(b)
 #define min(a,b) (a)<(b)?(a):(b)
 
-bool high(struct TreeNode* root, int h, int *min, int *max)
+int high(struct TreeNode* root, int h)
 {
+    int l, r;
     h++;
 
-    if (!root->left || !root->right)
+    if (!root || (!root->left && !root->right))
     {
-        if (*min == 0)
-            *min = h;
-        *min = min(h, *min);
-        *max = max(h, *max);
-        if (*max - *min > 1)
-            return false;
+        return h;
     }
 
     if (root->left)
     {
-        if (!high(root->left, h, min, max))
-            return false;
+        l = high(root->left, h);
+    }
+    else
+    {
+        l = h;
     }
     
     if (root->right)
     {
-        if (!high(root->right, h, min, max))
-            return false;
+        r = high(root->right, h);
+    }
+    else
+    {
+        r = h;
     }
 
-    return true;
+    return max(l, r);
+}
+
+bool isBalancedNode(struct TreeNode* root)
+{
+    int l, r, h = 0;
+    l = high(root->left, h);
+    r = high(root->right, h);
+    return (max(l, r) - min(l, r) < 2);
 }
 
 bool isBalanced(struct TreeNode* root){
-    bool ret = true;
-    int min = 0;
-    int max = 0;
-    int h = 0;
+    if (root && !isBalancedNode(root))
+        return false;
 
-    if (root)
-        ret = high(root, h, &min, &max);
+    if (root->left && !isBalanced(root->left))
+        return false;
 
-    return ret;
+    if (root->right && !isBalanced(root->right))
+        return false;
+
+    return true;
 }
