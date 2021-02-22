@@ -1,20 +1,36 @@
 #define max(a,b) (a) > (b) ? (a) : (b)
 
 int rob(int* nums, int numsSize){
-    int a = 0;
-    int b = 0;
+    int i;
+    int off = 0;
+    int max = nums[0];
+    int sum = 0;
 
-    for (int i = 0; i < numsSize; i++)
+    for (i = 1; i < numsSize; i++)
     {
-        if (i % 2 == 0)
+        if (nums[i] > max)
         {
-            a += nums[i];
-        }
-        else
-        {
-            b += nums[i];
+            off = i;
+            max = nums[i];
         }
     }
-    
-    return max(a,b);
+
+    for (i = off - 1; i >= 0; i--)
+    {
+        if (i == 0)
+        {
+            sum += nums[i];
+        }
+        else if (nums[i])
+        {
+            
+        }
+    }
+
+    for (i = off + 1; i < numsSize; i++)
+    {
+        /* code */
+    }
+
+    return sum+max;
 }
